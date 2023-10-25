@@ -161,9 +161,20 @@ const eventListeners = () => {
   const formModal = new bootstrap.Modal(document.querySelector('#add-video'));
   
   // FILTER BUTTON ROW
+
   document.querySelector('#filterContainer').addEventListener('click', (e) => {
-    console.log("You clicked a filter button", e.target.id);
+    //console.log("You clicked a filter button", e.target.id);
     // filter on category (either use .filter or a loop)
+    if (e.target.id === "clear") {
+      cardsOnDom(data);
+    } else if (e.target.id === "favorite") {
+      const favs = data.filter(taco => taco.favorite === true)
+      // .filter is a method on arrays that allow us to filter and search based on a condition; returns an array
+      cardsOnDom(favs);
+    } else if (e.target.id) {
+      const topics = data.filter(taco => taco.category === e.target.id);
+      cardsOnDom(topics);
+    }
     // rerender DOM with new array (use the cardsOnDom function)
   });
 
@@ -215,7 +226,7 @@ const startApp = () => {
   videoPlayer();
   filterButtons();
   cardsOnDom(data);
-  // eventListeners(); // always last
+  eventListeners(); // always last
 };
 
 startApp();
