@@ -212,9 +212,16 @@ const eventListeners = () => {
   form.addEventListener('submit', (e) => {
     e.preventDefault(); // this goes in EVERY form submit to prevent page reload
     // grab the values from the form inputs and create an object
+    const newVideoObj = {   
+      videoId: document.querySelector("#videoId").value,
+      title: document.querySelector("#title").value,
+      category: document.querySelector("#category").value,
+      favorite: document.querySelector("#favorite").checked,
+    }
     // push that object to the data array    
+    data.push(newVideoObj);
     // rerender cards using the cardsOnDom function and pass it the updated data array
-    
+    cardsOnDom(data);
     
     // Close modal and reset form
     formModal.hide()
