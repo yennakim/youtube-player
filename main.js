@@ -2,7 +2,7 @@
 const data = [
   {
     videoId: 'cNjIUSDnb9k',
-    title: 'Callbacks',
+    title: 'Callbacks Explained',
     category: 'javascript',
     favorite: true,
   },
@@ -31,12 +31,49 @@ const data = [
     favorite: false,
   },
   {
-    videoId: 'jjydMpW47wk',
-    title: 'Inspo on JS',
+    videoId: 'KyX2dIwHssQ',
+    title: 'EventListeners Explained',
+    category: 'javascript',
+    favorite: true,
+  },
+  {
+    videoId: 'bOkuPo5VbTg',
+    title: 'Functions Explained',
+    category: 'javascript',
+    favorite: false,
+  },
+  {
+    videoId: '3YW65K6LcIA',
+    title: 'Flexbox',
+    category: 'css',
+    favorite: false,
+  },
+  {
+    videoId: 'vsBZTLE8xHs',
+    title: 'HTML Forms',
+    category: 'html',
+    favorite: false,
+  },
+  {
+    videoId: '6Hb0qZ3PVWI',
+    title: 'forEach Explained',
+    category: 'javascript',
+    favorite: false,
+  },
+  {
+    videoId: 'E01cd5ZTQMU',
+    title: 'Splice Explained',
+    category: 'javascript',
+    favorite: true,
+  },
+  {
+    videoId: 'E01cd5ZTQMU',
+    title: 'Splice Explained',
     category: 'javascript',
     favorite: true,
   },
 ];
+
 
 // *********  UTILITY FUNCTIONS  ********* //
 const renderToDom = (divId, textToRender) => {
